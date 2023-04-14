@@ -1,18 +1,26 @@
-import './globals.css'
+"use client";
+import { useState, useMemo } from "react";
+import "./globals.css";
+import { ITheme } from "@/typings/theme.type";
+import GlobalContext from "@/context/GlobalContext";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const [theme, setTheme] = useState<ITheme["theme"]>("dark");
+  const themeContext: ITheme = useMemo(
+    () => ({ theme, setTheme }),
+    [theme, setTheme]
+  );
+
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className={theme}>
       <head />
-      <body>{children}</body>
+      <body>
+        <GlobalContext.Provider value={{ themeContext }}>
+          {children}
+        </GlobalContext.Provider>
+      </body>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;
