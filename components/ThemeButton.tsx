@@ -10,7 +10,7 @@ const ThemeButton = () => {
       className="fixed top-12 right-12 w-10 h-10"
       onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
     >
-      <div className="relative cursor-pointer">
+      <div className="relative cursor-pointer w-10 h-10">
         <Image
           src="/sun.svg"
           alt="sun"
@@ -18,8 +18,10 @@ const ThemeButton = () => {
           unselectable="off"
           width={40}
           height={40}
-          className={`absolute top-0 left-0 object-contain  transition-all ${
-            theme === "light" ? "opacity-100" : "opacity-0"
+          className={`w-10 h-10 absolute top-0 left-0 object-contain  transition-all ${
+            theme === "light"
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-9"
           }`}
         />
         <Image
@@ -29,8 +31,10 @@ const ThemeButton = () => {
           unselectable="off"
           width={40}
           height={40}
-          className={`absolute top-0 left-0 object-contain  transition-all ${
-            theme === "dark" ? "opacity-100" : "opacity-0"
+          className={`w-10 h-10 absolute top-0 left-0 object-contain  transition-all ${
+            theme === "dark"
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-9"
           }`}
         />
       </div>
