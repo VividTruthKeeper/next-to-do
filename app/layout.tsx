@@ -5,7 +5,7 @@ import { ITheme } from "@/typings/theme.type";
 import GlobalContext from "@/context/GlobalContext";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<ITheme["theme"]>("dark");
+  const [theme, setTheme] = useState<ITheme["theme"]>("light");
   const themeContext: ITheme = useMemo(
     () => ({ theme, setTheme }),
     [theme, setTheme]
