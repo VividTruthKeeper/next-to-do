@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import "react-color-palette/lib/css/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
