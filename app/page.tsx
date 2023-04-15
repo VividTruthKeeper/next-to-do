@@ -6,11 +6,13 @@ const inter = Inter({ subsets: ["latin"] });
 import AppTitle from "@/components/AppTitle";
 import ThemeButton from "@/components/ThemeButton";
 import Categories from "@/components/Categories";
+import AddCategory from "@/components/AddCategory";
 
 const Home = () => {
   return (
     <main className="bg-[#F7ECDE] dark:bg-[#1C273C] transition-all min-h-screen min-w-max">
       <ThemeButton />
+      <AddCategory />
       <div className="container">
         <div className="inner pt-20 pb-8 flex flex-col gap-28">
           <AppTitle />

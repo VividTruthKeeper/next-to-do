@@ -1,8 +1,12 @@
+"use client";
 import { v4 } from "uuid";
 import Category from "./Category";
+import { useContext } from "react";
+import GlobalContext from "@/context/GlobalContext";
 
 const Categories = () => {
   const tempList = ["Completed", "Urgent", "Important", "Later", "To study"];
+  const { isOpen, setIsOpen } = useContext(GlobalContext).modalContext.category;
   return (
     <div className="bg-[#54BAB9] dark:bg-[#354259] transition-all flex flex-col gap-[25px] p-6 rounded-[10px] border-b-[4px] border-b-[#44A0A0] dark:border-b-[#38938A] justify-between h-full">
       <div className="flex flex-col gap-[25px]">
@@ -17,6 +21,7 @@ const Categories = () => {
       </div>
       <button
         type="button"
+        onClick={() => setIsOpen(!isOpen)}
         className="px-3 py-2 bg-[#38938A] dark:bg-[#44A0A0] rounded-[10px] text-white font-extrabold transition-all"
       >
         Add category
