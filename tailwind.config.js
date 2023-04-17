@@ -11,6 +11,18 @@ module.exports = {
       gridTemplateColumns: {
         animatable: "1fr auto",
       },
+      backgroundColor: {
+        main: "#38938A",
+        secondary: "#54BAB9",
+      },
+      textColor: {
+        main: "#38938A",
+        secondary: "#54BAB9",
+      },
+      borderColor: {
+        main: "#38938A",
+        secondary: "#54BAB9",
+      },
     },
   },
   plugins: [],

@@ -22,7 +22,7 @@ const AddCategory = () => {
           setIsOpen(false);
         }}
         ref={ref}
-        className="flex flex-col items-center gap-9 max-w-[500px] max-h-fit w-full h-fit rounded-[10px] p-6 border-2 border-white bg-[#54BAB9] dark:bg-[#354259] transition-all"
+        className="flex flex-col items-center gap-9 max-w-[500px] max-h-fit w-full h-fit rounded-[10px] p-6 border-2 border-white bg-secondary dark:bg-[#354259] transition-all"
       >
         <div className="flex flex-col gap-5">
           <h5 className="uppercase text-center text-xl font-bold text-white">
@@ -65,7 +65,7 @@ const AddCategory = () => {
         </div>
         <button
           type="submit"
-          className=" uppercase font-bold rounded-[10px] border-2 border-[#38938A] text-[#38938A] text-xl bg-white max-w-[182px] py-1 px-2"
+          className=" uppercase font-bold rounded-[10px] border-2 border-[#38938A] text-main text-xl bg-white max-w-[182px] py-1 px-2"
         >
           Add Category
         </button>

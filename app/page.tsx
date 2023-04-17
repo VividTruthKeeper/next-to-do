@@ -7,6 +7,7 @@ import AppTitle from "@/components/AppTitle";
 import ThemeButton from "@/components/ThemeButton";
 import Categories from "@/components/Categories";
 import AddCategory from "@/components/AddCategory";
+import TaskNav from "@/components/TaskNav";
 
 const Home = () => {
   return (
@@ -18,7 +19,9 @@ const Home = () => {
           <AppTitle />
           <div className="flex gap-3">
             <Categories />
-            <div></div>
+            <div className="flex flex-col gap-2 w-full">
+              <TaskNav />
+            </div>
           </div>
         </div>
       </div>

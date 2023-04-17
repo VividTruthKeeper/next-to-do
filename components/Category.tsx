@@ -29,7 +29,7 @@ const Category = ({ title, color }: ICategory) => {
           );
           setCategories(filtered);
         }}
-        className={`cursor-pointer py-2 h-8 bg-[#38938A] dark:bg-[#54BAB9] rounded-[10px] flex justify-center  transition-all overflow-hidden ${
+        className={`cursor-pointer py-2 h-8 bg-main dark:bg-secondary rounded-[10px] flex justify-center  transition-all overflow-hidden ${
           trash ? "px-3 w-full" : "px-0 w-0"
         }`}
       >
