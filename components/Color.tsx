@@ -6,10 +6,16 @@ import { useContext } from "react";
 import { ColorPicker } from "react-color-palette";
 const Color = () => {
   const { color, setColor }: IColor = useContext(GlobalContext).colorContext;
-  console.log(color);
   return (
     <div>
-      <ColorPicker color={color} onChange={setColor} width={400} height={200} />
+      <ColorPicker
+        color={color}
+        onChange={setColor}
+        width={227}
+        height={130}
+        hideHSV
+        hideRGB
+      />
     </div>
   );
 };
