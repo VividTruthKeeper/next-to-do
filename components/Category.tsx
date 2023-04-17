@@ -1,14 +1,14 @@
-import { RandomColor } from "@/classes/RandomColor";
+// import { RandomColor } from "@/classes/RandomColor";
 import { ICategory } from "@/typings/category.type";
 
-const Category = ({ name }: ICategory) => {
-  const randomColor = new RandomColor();
+const Category = ({ title, color }: ICategory) => {
+  // const randomColor = new RandomColor();
   return (
     <p
-      style={{ background: randomColor.getColor() }}
-      className={`rounded-[10px] text-xl text-white text-center min-w-[200px] w-full block`}
+      style={{ backgroundColor: color }}
+      className={` rounded-[10px] text-xl text-white text-center min-w-[200px] w-full block`}
     >
-      {name}
+      {title}
     </p>
   );
 };

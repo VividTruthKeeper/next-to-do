@@ -11,16 +11,15 @@ const AddCategory = () => {
   const context = useContext<IContext>(GlobalContext);
   const { isOpen, setIsOpen } = context.modalContext.category;
   const { color } = context.colorContext;
+  const { categories, setCategories } = context.categoriesContext;
   const [input, setInput] = useState<string>("");
   return (
     <ModalWrapper isOpen={isOpen} setIsOpen={setIsOpen} elementRef={ref}>
       <form
         onSubmit={(e: FormEvent) => {
+          setCategories([...categories, { color: color.hex, title: input }]);
           e.preventDefault();
-          console.log({
-            title: input,
-            color: color.hex,
-          });
+          setIsOpen(false);
         }}
         ref={ref}
         className="flex flex-col items-center gap-9 max-w-[500px] max-h-fit w-full h-fit rounded-[10px] p-6 border-2 border-white bg-[#54BAB9] dark:bg-[#354259] transition-all"

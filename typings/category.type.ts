@@ -1,3 +1,11 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface ICategory {
-  name: string;
+  title: string;
+  color: string;
+}
+
+export interface ICategoryContext {
+  categories: ICategory[];
+  setCategories: Dispatch<SetStateAction<ICategory[]>>;
 }
