@@ -24,7 +24,8 @@ const Category = ({ title, color }: ICategory) => {
       <div
         onClick={() => {
           const filtered = categories.filter(
-            (category) => category.title !== title
+            (category) =>
+              !(category.color === color && category.title === title)
           );
           setCategories(filtered);
         }}
