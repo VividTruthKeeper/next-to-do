@@ -4,7 +4,11 @@ import { ICategory } from "@/typings/category.type";
 import { useContext, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-const Category = ({ title, color }: ICategory) => {
+interface IProps extends ICategory {
+  trashable?: boolean;
+}
+
+const Category = ({ title, color, trashable = true }: IProps) => {
   // const randomColor = new RandomColor();
   const { categories, setCategories } =
     useContext(GlobalContext).categoriesContext;
@@ -23,17 +27,22 @@ const Category = ({ title, color }: ICategory) => {
       </p>
       <div
         onClick={() => {
-          const filtered = categories.filter(
-            (category) =>
-              !(category.color === color && category.title === title)
-          );
-          setCategories(filtered);
+          if (trashable) {
+            const filtered = categories.filter(
+              (category) =>
+                !(category.color === color && category.title === title)
+            );
+            setCategories(filtered);
+          }
         }}
-        className={`cursor-pointer py-2 h-8 bg-main dark:bg-secondary rounded-[10px] flex justify-center  transition-all overflow-hidden ${
-          trash ? "px-3 w-full" : "px-0 w-0"
-        }`}
+        className="cursor-pointer py-1 h-8 bg-main dark:bg-secondary rounded-[10px] flex justify-center items-center  transition-all overflow-hidden px-0 w-0"
+        style={
+          trash && trashable
+            ? { width: 38, padding: "4px 4px" }
+            : { width: 0, padding: "4px 0px" }
+        }
       >
-        <FaTrashAlt height={8} />
+        <FaTrashAlt height={6} />
       </div>
     </div>
   );

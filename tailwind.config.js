@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         animatable: "1fr auto",
+        custom: "30px 1fr 200px",
       },
       backgroundColor: {
         main: "#38938A",

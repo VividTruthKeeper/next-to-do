@@ -7,5 +7,5 @@ export interface ICategory {
 
 export interface ICategoryContext {
   categories: ICategory[];
-  setCategories: Dispatch<SetStateAction<ICategory[]>>;
+  setCategories: Dispatch<SetStateAction<ICategoryContext["categories"]>>;
 }

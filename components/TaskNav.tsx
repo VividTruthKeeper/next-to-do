@@ -1,6 +1,6 @@
 const TaskNav = () => {
   return (
-    <div className="px-5 py-2 grid grid-cols-3 gap-2 rounded-[10px] border-b-[4px] w-full border-b-main bg-secondary items-center">
+    <div className="px-5 py-2 grid grid-cols-3 gap-2 rounded-[10px] border-b-[4px] w-full border-b-main bg-secondary dark:bg-[#354259] items-center">
       <span className="block justify-self-start text-left text-xl font-bold text-main">
         5 tasks
       </span>

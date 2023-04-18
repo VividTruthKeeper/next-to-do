@@ -8,6 +8,7 @@ import ThemeButton from "@/components/ThemeButton";
 import Categories from "@/components/Categories";
 import AddCategory from "@/components/AddCategory";
 import TaskNav from "@/components/TaskNav";
+import Tasks from "@/components/Tasks";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
             <Categories />
             <div className="flex flex-col gap-2 w-full">
               <TaskNav />
+              <Tasks />
             </div>
           </div>
         </div>
